@@ -1,1 +1,47 @@
-<!-- HTML 코드를 작성해 주세요. -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>섹션 관련 요소</title>
+</head>
+<body>
+ <!--<div></div>로만 본문을 마크업 하는 경우 
+랜드마크(메인으로 건너뛰기.. 원하는 부분으로 검색) 
+웹 접근성에 좋지 않음
+wai-aria: 리아 기술을 접근 가능하게 만드는 권고안. 노션 문서 웹 표준과 웹 접근성에 정리되어 있음
+다양한 ui들을 자동 적용되게끔 배포하기도..
+-->
+ <!--네이티브 요소-->
+  <header>본문 헤더</header>
+  <nav>내비게이션</nav>
+  <main></main>
+  <footer>본문 푸터</footer>
+  <main>
+    <section>
+      <header>섹션 헤더</header>
+      <fooster>섹션 푸터</fooster>
+    </section>
+    <article>
+      <header>섹션 헤더</header>
+      <footer>섹션 푸터</footer>
+    </article>
+    <aside> 부가 콘텐츠 </aside>
+    <footer>본문 푸터</footer>
+  </main>
+
+
+  <!--컨테이너 요소-->
+  <div role="banner"> 본문 헤더</div>
+  <div role="navigation">내비게이션</div>
+  <div role="main"></div>
+  <div role="navigation">내비게이션</div>
+
+ <!--블록 division
+ 인라인 블록의 한 영역, 더 작은 영역 div
+ 얘네는 의미를 가지지 않기 때문에
+ 최대한 의미를 갖도록. 설정하는게 좋음-->
+
+</body>
+</html>
