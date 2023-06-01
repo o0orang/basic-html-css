@@ -4,6 +4,13 @@
 * {
   color: inherit;
 }
+ 
+/*가상 요소 선택자*/
+::selection {
+  background: #373e6a;
+  color: #fff;
+}
+
 /*태그 선택자*/
 body {
   font-family: "SUIT";
@@ -19,6 +26,9 @@ body {
   text-shadow: 4px 4px 3px #77f;
 }
 
+.align {
+  text-align: center;
+}
 /*ul 띄어쓰기 차이 있음 자식 요소 선택되서 ul menu 가졌을 때만 
 menu 가진 하위 선택자 
 h1 menu가 안 먹는 이유는 ul에 menu만 ! 설정되어있으니까 h1 menu가 아니라 
@@ -34,3 +44,51 @@ ul.menu{
 #demo {
  border:red;
 }
+
+/*menu에 a태그 중 .html로 끝나는 속성 선택 */
+.menu a[href$=".html"] {
+  font-weight: 700;
+  background-color: blue;
+}
+
+
+/*선택자 그룹핑 목록*/
+.fancy, .menu {
+font-size : 24px;}
+
+ /*가상 요소 선택자 가상으로 만들어서 추가 
+ 가짜인지 어떻게 아나면
+ 컨트롤 a 누르면 가짜로 만든 이전 요소와 다음 요소만 선택이 안됨
+ p요소의 자식 before after
+ 붙여적으면 나자신이니까 띄어야 하지 않아요? before와 after은 붙여서 해야한다
+ */
+ .align::before{
+  content:"이전 요소";
+ }
+
+ .align::after{
+  content:"다음 요소";
+ }
+
+/*가상 클래스 중 구조선택자
+클래스 없음에도 적용됨
+html 에서는 0부터 시작
+css 에서는 1부터 시작..
+odd홀수 짝수는 찾아쓰기
+hover라는 가상 클래스는 input이나 a태그 뿐만 아니라 어디서나 쓸 수 있다
+
+h1은 포커스를 받을 수 없음 마우스 올릴 때도 선택하고 싶을 때
+객체에 포커스 받을 수 있게 하려면 tabindex0을 주면 된다
+*/
+.menu li:nth-child(-n + 2),.menu li:nth-child(n + 7){
+  color:yellow;
+}
+
+.menu a:hover{
+  border: 5px solid blue;
+}
+
+h1.menu:hover{
+background-color: pink;
+}
+/*선생님코드랑 비교하기 지금 사이트가 원하는대로 반영이 안됨 */
