@@ -1,1 +1,36 @@
 /* CSS 선택자(Selector) */
+
+/*전체 선택자*/
+* {
+  color: inherit;
+}
+/*태그 선택자*/
+body {
+  font-family: "SUIT";
+  font-weight: 300;
+  background-color: #181818;
+  color:(255, 0 ,0);
+  /* rgba() 알파값 
+  color: hsla(110,100%,100%,1); 색상채도명도알파*/
+}
+
+.fancy {
+  font-weight: bold;
+  text-shadow: 4px 4px 3px #77f;
+}
+
+/*ul 띄어쓰기 차이 있음 자식 요소 선택되서 ul menu 가졌을 때만 
+menu 가진 하위 선택자 
+h1 menu가 안 먹는 이유는 ul에 menu만 ! 설정되어있으니까 h1 menu가 아니라 
+*/
+
+ul.menu{
+	margin: 0;
+	padding-left: 0;
+  color:red;
+}
+
+/*샵은 아이디 찾는 거  */
+#demo {
+ border:red;
+}
