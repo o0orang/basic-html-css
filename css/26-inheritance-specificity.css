@@ -1,4 +1,38 @@
 body {
   font-family: "SUIT";
-  font-weight: 300;
+  font-weight: 700;
 }
+
+ /*
+.menu ul a{
+  color: gray; }
+ 부모인 ul로 줬으니까 gray와 blue가 겹치면서 밀림
+  내가 가진 값이 우선하기 때문에*/
+
+.menu {
+    color: gray;
+    font-size: 36px;
+    border:5px green dashed;
+  }
+  
+.menu li a{
+  color: inherit;
+  border: inherit;
+
+}
+
+.menu li{
+  background-color: pink;
+}
+
+.pick{
+  background-color: yellow;
+}
+
+/* 이것도 가능함 이걸 권장
+.menu a{
+  color: inherit;
+}
+*/
+
+
